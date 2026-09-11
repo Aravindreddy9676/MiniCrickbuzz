@@ -273,6 +273,13 @@ void over(int tmno, int op) {
     while (ball < 6 && total >= target) {
       printf("BALL %d : ", ball + 1);
       scanf("%d", &runs);
+      while (runs != -2 && runs != -1 &&runs != 0 && runs != 1 &&
+            runs != 2 && runs != 3 &&runs != 4 && runs != 6) {
+                printf("Wrong input! Please enter ");
+                printf("-2, -1, 0, 1, 2, 3, 4 or 6: ");
+                scanf("%d", &runs);
+            }
+
       if (wkt == 10)
         break;
       if (f == 1) {
